@@ -1,0 +1,13 @@
+[Unit]
+Description=RTSP to WebRTC
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/RTSPtoWebRTC/RTSPtoWebRTC
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
