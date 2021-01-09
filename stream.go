@@ -20,11 +20,6 @@ func serveStreams() {
 					continue
 				}
 				session.RtpKeepAliveTimeout = 10 * time.Second
-				if err != nil {
-					log.Println(name, err)
-					time.Sleep(5 * time.Second)
-					continue
-				}
 				codec, err := session.Streams()
 				if err != nil {
 					log.Println(name, err)
